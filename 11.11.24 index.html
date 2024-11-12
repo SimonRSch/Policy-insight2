@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Insight</title>
+    <style>
+        /* General Page Styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Glossy center circle with adjusted size and larger text */
+        .center-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: darkred;
+            font-size: 36px; /* Increased text size */
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(255, 0, 0, 0.3), inset 0 4px 6px rgba(255, 0, 0, 0.3);
+            z-index: 10; /* Positions it in front of dividers */
+        }
+
+        /* 4-Field Layout */
+        .field {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px; /* Increased font size */
+            font-weight: bold;
+            color: white;
+            transition: background 0.3s ease;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Adds a subtle 3D effect */
+        }
+
+        /* Grey divider lines */
+        .divider {
+            position: absolute;
+            background-color: grey;
+            z-index: 5; /* Positions dividers behind the center circle */
+        }
+
+        /* Horizontal and vertical dividers */
+        .horizontal-divider {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-1px);
+        }
+
+        .vertical-divider {
+            height: 100%;
+            width: 2px;
+            left: 50%;
+            top: 0;
+            transform: translateX(-1px);
+        }
+
+        /* Positioning fields */
+        #people { top: 0; left: 0; }
+        #ideas { top: 0; right: 0; }
+        #machines { bottom: 0; left: 0; }
+        #contact { bottom: 0; right: 0; }
+
+        /* Link Styling */
+        .field a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Field Hover Effect */
+        .field:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Center Circle with Text -->
+    <div class="center-circle">policy insight</div>
+
+    <!-- Grey Dividers for 3D Effect -->
+    <div class="divider horizontal-divider"></div>
+    <div class="divider vertical-divider"></div>
+
+    <!-- Four clickable fields -->
+    <div id="people" class="field"><a href="people.html">People</a></div>
+    <div id="ideas" class="field"><a href="ideas.html">Ideas</a></div>
+    <div id="machines" class="field"><a href="machines.html">Machines</a></div>
+    <div id="contact" class="field"><a href="contact.html">Get in touch</a></div>
+
+</body>
+</html>
